@@ -1,0 +1,30 @@
+{
+    "manifest_version": 2,
+    "name": "Örnek Chrome Eklentisi",
+    "version": "1.0",
+    "description": "Bu eklenti örneği, Chrome'da çalışacak basit bir eklentidir.",
+    "permissions": [
+      "activeTab",
+      "storage"
+    ],
+    "browser_action": {
+      "default_icon": {
+        "16": "icon16.png"
+       
+      }
+    },
+    "icons": {
+      "16": "icon16.png"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ],
+    "background": {
+      "scripts": ["yakala.js"],
+      "persistent": false
+    }
+  }
+  
